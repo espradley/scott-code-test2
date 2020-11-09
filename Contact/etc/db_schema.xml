@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="gorilla_contact" resource="default" comment="Contact form">
+        <column xsi:type="int" name="entity_id" padding="10" identity="true" unsigned="true" nullable="false" comment="Entity Id"/>
+        <column xsi:type="varchar" name="first_name" nullable="false" length="255" comment="First Name"/>
+        <column xsi:type="varchar" name="last_name" nullable="false" length="255" comment="Last Name"/>
+        <column xsi:type="varchar" name="email" nullable="false" length="255" comment="Email"/>
+        <column xsi:type="timestamp" name="time" comment="Time"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
+        <constraint xsi:type="unique" referenceId="CUSTOM_TABLE_EMAIL">
+            <column name="email"/>
+        </constraint>
+    </table>
+</schema>

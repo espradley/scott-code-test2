@@ -1,0 +1,15 @@
+{
+    "gorilla_contact": {
+        "column": {
+            "entity_id": true,
+            "first_name": true,
+            "last_name": true,
+            "email": true,
+            "time": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "CUSTOM_TABLE_EMAIL": true
+        }
+    }
+}
